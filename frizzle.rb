@@ -1,21 +1,23 @@
 class Frizzle < Formula
   desc "Local AWS EventBridge simulator for testing event-driven systems"
   homepage "https://github.com/LukeOfEarth/frizzle"
-  url "https://github.com/LukeOfEarth/frizzle/releases/download/v0.3.0/frizzle_0.3.0_#{OS.kernel_name.downcase}_#{Hardware::CPU.arch}.tar.gz"
   license "MIT"
-  version "0.3.0"
-
+  version "0.3.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      sha256 "5230af9cf221bad1d88b82dd1ab0d62fa285c52d86f313fbd243e0f1e85e7aa0"
+      url "https://github.com/LukeOfEarth/frizzle/releases/download/v0.3.2/frizzle_0.3.2_darwin_arm64.tar.gz"
+      sha256 "c8577813941bedf6d73218e3a9028da8cf8fdeeadf45d3856208d2ee2bb4dfa9"
     else
-      sha256 "710d98754422ef4ea21cfe2d21458290e6f829302275d6d242756e51fbf8ff56"
+      url "https://github.com/LukeOfEarth/frizzle/releases/download/v0.3.2/frizzle_0.3.2_darwin_amd64.tar.gz"
+      sha256 "8e9447a1ea1827f9034ab4bc635036949de704af0e439054b97a7b9bcbbd01bb"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      sha256 "959a17e9b9f5d39dbb65c6c26cde1530e57401e13c21351de7b681c08b02279c"
+      url "https://github.com/LukeOfEarth/frizzle/releases/download/v0.3.2/frizzle_0.3.2_linux_arm64.tar.gz"
+      sha256 "881972b4b957e81a6dc2f000c024327ea7791dc2832f192e75da984468d0eb90"
     else
-      sha256 "dc963b96e56493d6b47448720900f0234b51e146881bc963944e651fd754cd1f"
+      url "https://github.com/LukeOfEarth/frizzle/releases/download/v0.3.2/frizzle_0.3.2_linux_amd64.tar.gz"
+      sha256 "2cdda3447c3251b7f8dc2a9551978434300bc48337c0cfa0435cfbb4916948bc"
     end
   end
 
